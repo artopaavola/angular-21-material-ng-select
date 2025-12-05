@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@ng-select/ng-select/themes/material.theme.css';
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 1rem;
+}

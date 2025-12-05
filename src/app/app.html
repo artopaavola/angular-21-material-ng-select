@@ -1,0 +1,11 @@
+<main>
+  <h1>{{ title() }}</h1>
+  
+  <button mat-flat-button color="primary" (click)="openDialog()">
+    Avaa dialogi
+  </button>
+
+  @if (selectedCity()) {
+    <p>Valittu kaupunki: {{ selectedCity() }}</p>
+  }
+</main>

@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>Valitse kaupunki</h2>
+
+<mat-dialog-content>
+  <ng-select
+    [items]="cities"
+    bindLabel="name"
+    placeholder="Valitse kaupunki"
+    [(ngModel)]="selectedCity"
+    appendTo="body"
+  />
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Peruuta</button>
+  <button mat-flat-button color="primary" (click)="close()">Valitse</button>
+</mat-dialog-actions>
