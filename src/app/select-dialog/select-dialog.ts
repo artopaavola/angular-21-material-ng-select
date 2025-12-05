@@ -14,7 +14,7 @@ interface City {
   imports: [MatDialogModule, MatButtonModule, NgSelectModule, FormsModule],
   templateUrl: './select-dialog.html',
   styleUrl: './select-dialog.css',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SelectDialog {
   protected readonly cities: City[] = [
@@ -27,7 +27,7 @@ export class SelectDialog {
     { id: 7, name: 'Jyväskylä' },
     { id: 8, name: 'Kuopio' },
     { id: 9, name: 'Lahti' },
-    { id: 10, name: 'Rovaniemi' }
+    { id: 10, name: 'Rovaniemi' },
   ];
 
   protected readonly selectedCity = signal<City | null>(null);

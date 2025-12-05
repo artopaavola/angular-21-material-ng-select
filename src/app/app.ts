@@ -1,13 +1,13 @@
 import { Component, inject, signal } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDialog } from '@angular/material/dialog';
 import { SelectDialog } from './select-dialog/select-dialog';
 
 @Component({
   selector: 'app-root',
   imports: [MatButtonModule],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
   protected readonly title = signal('angular-21');
@@ -17,10 +17,10 @@ export class App {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(SelectDialog, {
-      width: '400px'
+      width: '400px',
     });
 
-    dialogRef.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe((result) => {
       if (result) {
         this.selectedCity.set(result.name);
       }
